@@ -1,0 +1,17 @@
+name: Test dagger
+on: [push, pull_request]
+jobs:
+  build:
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v3.3.0
+      - name: Set up python
+        uses: actions/setup-python@v4.5.0
+        with:
+          python-version: 2.7
+      - name: Install dagger
+        run: |
+          pip install dagger-io
+      - name: Run tests
+        run: |
+          python main.py
