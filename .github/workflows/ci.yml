@@ -18,6 +18,9 @@ jobs:
           path: |
             /tmp/output-dagger
           key: cache-Py2.7-Plone4.3
+      - name: Prepare use of cache
+        run: |
+          cp -r /tmp/output-dagger/* cache
       - name: Install dagger
         run: |
           pip install dagger-io
