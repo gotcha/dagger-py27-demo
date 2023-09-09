@@ -12,6 +12,7 @@ jobs:
       - name: Make cache dir
         run: |
           mkdir -p /tmp/output-dagger
+          touch /tmp/output-dagger/one.txt
       - name: Caching
         uses: actions/cache@v3.2.3
         with:
