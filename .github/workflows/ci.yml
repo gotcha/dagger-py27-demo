@@ -20,6 +20,7 @@ jobs:
           key: cache-Py2.7-Plone4.3
       - name: Prepare use of cache
         run: |
+          mkdir cache
           cp -r /tmp/output-dagger/* cache
       - name: Install dagger
         run: |
