@@ -33,7 +33,7 @@ async def test(hostdir: str):
             .with_exec(["/src/bin/buildout", "-vv",
                         "buildout:download-cache=/src/cache/buildout/download",
                         "buildout:eggs-directory=/src/cache/buildout/eggs", "-c", "/src/buildout.cfg", "install", "test"])
-            .with_exec(["/src/bin/test", "-s", "zope.component"])
+            .with_exec(["/src/bin/test", "-s", "archetypes.schemaextender"])
             .directory("/src/cache")
             .export(hostdir)
 
