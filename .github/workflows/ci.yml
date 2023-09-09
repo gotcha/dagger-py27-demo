@@ -9,6 +9,12 @@ jobs:
         uses: actions/setup-python@v4.5.0
         with:
           python-version: 3.11
+      - name: Caching
+        uses: actions/cache@v3.2.3
+        with:
+          path: |
+            /tmp/cache-dagger
+          key: cache-Py2.7-Plone4.3
       - name: Install dagger
         run: |
           pip install dagger-io
