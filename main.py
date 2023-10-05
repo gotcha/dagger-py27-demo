@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-"""Execute a command."""
+"""run buildout"""
 
 import sys
 
